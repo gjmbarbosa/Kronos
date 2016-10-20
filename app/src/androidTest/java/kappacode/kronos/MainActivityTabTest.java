@@ -56,15 +56,6 @@ public class MainActivityTabTest {
                         2),
                         isDisplayed()));
         actionBar$Tab3.check(matches(isDisplayed()));
-        ViewInteraction actionBar$Tab4 = onView(
-                allOf(childAtPosition(
-                        childAtPosition(
-                                withId(R.id.tabs),
-                                0),
-                        3),
-                        isDisplayed()));
-        actionBar$Tab3.check(matches(isDisplayed()));
-
     }
 
     private static Matcher<View> childAtPosition(
