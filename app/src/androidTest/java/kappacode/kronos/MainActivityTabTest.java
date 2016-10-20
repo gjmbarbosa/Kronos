@@ -1,6 +1,5 @@
 package kappacode.kronos;
 
-
 import android.support.test.espresso.ViewInteraction;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
@@ -55,6 +54,14 @@ public class MainActivityTabTest {
                                 withId(R.id.tabs),
                                 0),
                         2),
+                        isDisplayed()));
+        actionBar$Tab3.check(matches(isDisplayed()));
+        ViewInteraction actionBar$Tab4 = onView(
+                allOf(childAtPosition(
+                        childAtPosition(
+                                withId(R.id.tabs),
+                                0),
+                        3),
                         isDisplayed()));
         actionBar$Tab3.check(matches(isDisplayed()));
 
