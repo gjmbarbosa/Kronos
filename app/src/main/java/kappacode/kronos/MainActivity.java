@@ -1,5 +1,7 @@
 package kappacode.kronos;
 
+import android.app.KeyguardManager;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
@@ -8,6 +10,8 @@ import android.support.v7.widget.Toolbar;
 
 import kappacode.kronos.fragments.*;
 import kappacode.kronos.viewpageradapter.*;
+
+import static android.R.attr.name;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,6 +29,15 @@ public class MainActivity extends AppCompatActivity {
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
+
+        try {
+            KeyguardManager mKeyGuardManager = (KeyguardManager)      this.getSystemService(Context.KEYGUARD_SERVICE);
+            KeyguardManager.KeyguardLock mLock = mKeyGuardManager.newKeyguardLock(KEYGUARD_SERVICE);
+            mLock.disableKeyguard();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 
     private void setupViewPager(ViewPager viewPager) {
