@@ -41,6 +41,7 @@ public class MainActivityTabTest {
             mActivityTestRule.runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
+
                     KeyguardManager mKG = (KeyguardManager) activity.getSystemService(Context.KEYGUARD_SERVICE);
                     KeyguardManager.KeyguardLock mLock = mKG.newKeyguardLock(KEYGUARD_SERVICE);
                     mLock.disableKeyguard();
