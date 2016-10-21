@@ -5,7 +5,6 @@ import android.support.test.espresso.ViewInteraction;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
-
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -26,15 +25,15 @@ public class MainActivityTabClickTest {
     @Test
     public void mainActivityTabClickTest() {
         ViewInteraction appCompatTextView = onView(
-                allOf(withText("Goals"), isDisplayed()));
+                allOf(withText("My Day"), isDisplayed()));
         appCompatTextView.perform(click());
 
         ViewInteraction appCompatTextView2 = onView(
-                allOf(withText("My Day"), isDisplayed()));
+                allOf(withText("History"), isDisplayed()));
         appCompatTextView2.perform(click());
 
         ViewInteraction appCompatTextView3 = onView(
-                allOf(withText("History"), isDisplayed()));
+                allOf(withText("Goals"), isDisplayed()));
         appCompatTextView3.perform(click());
 
     }
