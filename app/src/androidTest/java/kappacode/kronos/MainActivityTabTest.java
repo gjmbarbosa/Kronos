@@ -3,10 +3,10 @@ package kappacode.kronos;
 
 import android.app.KeyguardManager;
 import android.content.Context;
-import android.support.test.annotation.UiThreadTest;
 import android.support.test.espresso.ViewInteraction;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
+import android.test.UiThreadTest;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
@@ -27,12 +27,12 @@ import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static org.hamcrest.Matchers.allOf;
 
-
 @RunWith(AndroidJUnit4.class)
 public class MainActivityTabTest {
 
     @Rule
     public ActivityTestRule<MainActivity> mActivityTestRule = new ActivityTestRule<>(MainActivity.class);
+
     @UiThreadTest
     @Before
     public void setUp() throws Exception {
@@ -41,7 +41,7 @@ public class MainActivityTabTest {
             mActivityTestRule.runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    KeyguardManager mKG = (KeyguardManager) activity.getSystemService(Context.KEYGUARD_SERVICE);
+                    KeyguardManager mKG = (KeyguardManager) activity.getSystemService(KEYGUARD_SERVICE);
                     KeyguardManager.KeyguardLock mLock = mKG.newKeyguardLock(KEYGUARD_SERVICE);
                     mLock.disableKeyguard();
 
@@ -57,6 +57,7 @@ public class MainActivityTabTest {
             throwable.printStackTrace();
         }
     }
+
 
     @Test
     public void mainActivityTabTest() {
