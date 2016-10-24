@@ -15,6 +15,7 @@ import kappacode.kronos.R;
 
 public class MyDay extends Fragment{
     private ListView listViewActivities;
+    private PieChart pieChart;
 
     public MyDay() {
         // Required empty public constructor
