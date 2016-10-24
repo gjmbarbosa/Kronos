@@ -8,6 +8,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ListView;
 
+import com.github.mikephil.charting.charts.PieChart;
+
+
 import kappacode.kronos.R;
 
 public class MyDay extends Fragment{
