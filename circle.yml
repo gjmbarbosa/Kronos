@@ -18,9 +18,19 @@ dependencies:
         - ANDROID_HOME=/usr/local/android-sdk-linux ./gradlew dependencies
 
 test:
-    override:
-        - (./gradlew assemble):
-            timeout: 360
+      pre:
+    # start the emulator
+    - emulator -avd circleci-android19 -no-skin -no-audio -no-window -no-boot-anim:
+        background: true
+        parallel: true
+  override:
+    # run infer
+    - ./gradlew clean
+    - infer -i -- ./gradlew build
+    # wait for it to have booted
+    - circle-android wait-for-boot
+    # run tests  against the emulator.
+    - ./gradlew connectedAndroidTest
     post:
     - mkdir -p $CIRCLE_TEST_REPORTS/junit/
     - find . -type f -regex ".*/build/test-results/.*xml" -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \;
