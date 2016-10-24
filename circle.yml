@@ -4,7 +4,7 @@
 
 general:
     artifacts:
-        - /home/ubuntu/your-app-name/app/build/outputs/apk/
+        - /home/ubuntu/kronos/app/build/outputs/apk/
 
 machine:
  java:
@@ -19,8 +19,5 @@ dependencies:
 
 test:
     override:
-       - (./gradlew assemble):
+        - (./gradlew assemble):
             timeout: 360
-       - cp -r app/build/outputs $CIRCLE_ARTIFACTS
-       - cp -r app/infer-out $CIRCLE_ARTIFACTS
-       - cp -r app/build/outputs/androidTest-results/* $CIRCLE_TEST_REPORTS
