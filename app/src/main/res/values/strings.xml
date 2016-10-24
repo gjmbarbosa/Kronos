@@ -1,6 +1,15 @@
 <resources>
+    <!-- Titles -->
     <string name="app_name">Kronos</string>
     <string name="my_day">My Day</string>
     <string name="goals">Goals</string>
     <string name="history">History</string>
+
+
+    <!-- MyDayFragment -->
+
+    <string name="button_add_activity">+ Add a new Activity</string>
+    <string name="title_activity_my_day">How was your day?</string>
+    <string name="textView_myDay_titulo">How was your day?</string>
+    <string name="action_setVisibilidadeGrafico">Hide/Show Chart</string>
 </resources>

@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--Action Bar-->
     <color name="colorPrimary">#FF3D00</color>
-    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorPrimaryDark">#DD2C00</color>
     <color name="textColorPrimary">#FFFFFF</color>
     <color name="windowBackground">#FFFFFF</color>
     <color name="navigationBarColor">#000000</color>
     <color name="colorAccent">#FFF3E0</color>
+
+
+    <!-- MyDayFragment -->
+    <color name="textView_myDay_title">#000000</color>
+    <color name="button_add_activity">#000000</color>
+
+
 </resources>
