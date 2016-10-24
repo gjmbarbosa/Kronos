@@ -9,16 +9,7 @@ dependencies:
   cache_directories:
     - ~/.gradle
     - ~/.android
-    - ~/.infer
-  pre:
-    - |
-      mkdir -p ~/.infer
-      if [ ! -e ~/.infer/infer-linux64-v0.1.0/infer/infer/bin ]; then 
-        cd ~/.infer && wget https://github.com/facebook/infer/releases/download/v0.1.0/infer-linux64-v0.1.0.tar.xz
-        tar xf infer-linux64-v0.1.0.tar.xz
-        rm infer-linux64-v0.1.0.tar.xz
-      fi  
-      
+    - ~/.infer 
   override:
     - echo y | android update sdk --no-ui --filter "android-24,build-tools-24.0.1"
     - echo y | android update sdk --no-ui --all --filter "platform-tools, tools"
