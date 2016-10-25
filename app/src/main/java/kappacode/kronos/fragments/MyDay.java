@@ -9,7 +9,8 @@ import android.widget.Button;
 import android.widget.ListView;
 
 import com.github.mikephil.charting.charts.PieChart;
-
+import com.github.mikephil.charting.components.Legend;
+import com.github.mikephil.charting.components.Legend.LegendPosition;
 
 import kappacode.kronos.R;
 
@@ -25,10 +26,10 @@ public class MyDay extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-
         View inflaterView = inflater.inflate(R.layout.myday, container, false);
 
-        View temp =inflaterView.findViewById(R.id.view0);
+        pieChart = (PieChart) inflaterView.findViewById(R.id.piechart);
+
 
         listViewActivities =(ListView) inflaterView.findViewById(R.id.listView_activities);
 
