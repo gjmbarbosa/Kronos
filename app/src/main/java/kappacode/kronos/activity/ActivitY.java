@@ -1,7 +1,8 @@
 package kappacode.kronos.activity;
 
-
 import android.graphics.Color;
+import android.util.Log;
+import java.util.List;
 
 
 public class ActivitY {
