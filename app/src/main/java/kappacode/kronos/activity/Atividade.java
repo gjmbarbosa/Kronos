@@ -5,7 +5,7 @@ import android.util.Log;
 import java.util.List;
 
 
-public class ActivitY {
+public class Atividade {
     private String nome;
     private double duracao; //em horas
     private double qualidade; //qualidade do tempo gasto para realizar a tarefa
@@ -19,10 +19,10 @@ public class ActivitY {
      */
     private boolean check;
     private int cor;
-    private static final double MINUTO_MINIMO = 15;
-    private static final double DURACAO_MINIMA = 0.25;
+    public static final double MINUTO_MINIMO = 15;
+    public static final double DURACAO_MINIMA = 0.25;
 
-    public ActivitY(String nome, double duracao, double qualidade, int dia, int mes, int ano) {
+    public Atividade(String nome, double duracao, double qualidade, int dia, int mes, int ano) {
         this.nome = nome;
         setDuracao(duracao);
         this.qualidade = qualidade;
@@ -123,7 +123,7 @@ public class ActivitY {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        ActivitY atividade = (ActivitY) o;
+        Atividade atividade = (Atividade) o;
 
         return !(getNome() != null ? !getNome().equals(atividade.getNome()) : atividade.getNome() != null);
 
