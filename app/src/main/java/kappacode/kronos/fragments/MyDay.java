@@ -8,9 +8,13 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ListView;
 
+//Gráfico
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.components.Legend;
 import com.github.mikephil.charting.components.Legend.LegendPosition;
+
+//Banco de dados
+import kappacode.kronos.database.*;
 
 import kappacode.kronos.R;
 

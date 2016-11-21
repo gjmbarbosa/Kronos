@@ -5,11 +5,89 @@
     <string name="goals">Goals</string>
     <string name="history">History</string>
 
-
     <!-- MyDayFragment -->
 
     <string name="button_add_activity">+ Add a new Activity</string>
     <string name="title_activity_my_day">How was your day?</string>
     <string name="textView_myDay_titulo">How was your day?</string>
     <string name="action_setVisibilidadeGrafico">Hide/Show Chart</string>
+
+    <!-- PieChart -->
+    <string name="pieChart_description">PieChart of Activities</string>
+    <string name="pieChart_title">activities</string>
+
+    <!-- Avisos -->
+    <string name="atividadeChecadaComMesmoNome">You already created an Activity with this same name</string>
+    <string name="horasDoDiaExcedidas">You exceeded the 24 hours of your day</string>
+
+    <!-- Activity Item -->
+    <string name="listaAtividadesVazia">There are no Activities in your list in the moment.\nPress \"+ Add a new Activity\" to let Kronos help you :)</string>
+    <string name="editText_atividade_nome">Name</string>
+    <string name="editText_atividade_horas">hour</string>
+    <string name="editText_activityTimeMinute">min</string>
+    <string name="editText_cancelar">Cancel</string>
+    <string name="editText_activityOK">OK</string>
+    <string name="button_adicionar_atividade">+ Add a new Activity</string>
+    <string name="activityDefaultName">activity</string>
+    <string name="textView_doisPontos">:</string>
+
+    <!-- Rating -->
+    <string name="button_atividade_qualidade">0</string>
+
+    <!-- History -->
+    <string name="spinner_selectPeriod">teste</string>
+    <string name="textView_history_title">What I\'ve done</string>
+    <string name="title_activity_history">History</string>
+    <string name="history_activities_title">Activities</string>
+    <string name="history_goals_title">Goals</string>
+    <string name="textView_separator">-</string>
+    <string name="yesterday">yesterday</string>
+    <string name="last_week">last week</string>
+    <string name="last_month">last month</string>
+    <string name="last_year">last year</string>
+    <string name="custom">custom</string>
+
+    <!-- Goals -->
+    <string name="title_activity_goal">What do you want?</string>
+    <string name="button_adicionarMeta">Add New Goal</string>
+    <string name="categoria_default">No Category</string>
+    <string name="progresso_meta">% completed</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- AddGoal -->
+    <string name="title_activity_add_goal">Add Goal</string>
+    <string name="editText_metaDescricao">Description*</string>
+    <string name="textView_metaAtingir">Reach*:</string>
+    <string name="editText_metaDuracaoHoras">hours</string>
+    <string name="editText_metaDuracaoMinutos">minutes</string>
+    <string name="editText_metaCategoria">category</string>
+    <string name="editText_metaPrazoCustom">days*</string>
+    <string name="button_associarAtividades">Connect Activities</string>
+    <string name="textView_atividadesAssociadas">Activities connected: </string>
+    <string name="checkBox_notificar">Notifify</string>
+    <string name="checkBox_repetir">Impose Goal just once</string>
+    <string name="imageButton_addMeta">Add Goal</string>
+    <string name="alertDialog_metaCriada">Goal created!</string>
+    <string name="alertDialog_metaCriada_button">Cool!</string>
+    <string name="alertDialog_duracaoMetaNaoPreenchida">You didn\'t put a time to reach! Please fill this field :)</string>
+    <string name="alertDialog_duracaoMetaNaoPreenchida_button">So, let me put</string>
+    <string name="alertDialog_descricaoMetaNaoPreenchida">You didn\'t put a Description! Please fill this field before create your Goal :)</string>
+    <string name="alertDialog_descricaoMetaNaoPreenchida_button">So, let me put</string>
+    <string name="alertDialog_metaRepetida">There is a Goal with this same Description. Change it, please.</string>
+    <string name="alertDialog_metaRepetida_button">So, let me change the Description</string>
+    <!-- Opcoes de Prazo -->
+    <string name="semPrazo">No Deadline</string>
+    <string name="prazoUmaSemana">One week</string>
+    <string name="prazoMeioMes">15 days</string>
+    <string name="prazoUmMes">One month</string>
+    <string name="prazoUmSemestre">6 months</string>
+    <string name="prazoUmAno">One year</string>
+    <string name="prazoCustomizado">Custom</string>
+    <!-- Associar Atividade Dialog Fragment -->
+    <string name="textView_associarAtividade">Choose the Activities connected with your Goal</string>
+    <string name="editText_associarNovaAtividade">new actvity\'s name</string>
+
+
 </resources>
+
