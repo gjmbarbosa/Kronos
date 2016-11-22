@@ -1,13 +1,16 @@
 <resources>
-    <!-- Titles -->
     <string name="app_name">Kronos</string>
-    <string name="my_day">My Day</string>
-    <string name="goals">Goals</string>
-    <string name="history">History</string>
 
-    <!-- MyDayFragment -->
+    <!-- "genericos" -->
+    <string name="button_ok">OK</string>
 
-    <string name="button_add_activity">+ Add a new Activity</string>
+    <!-- MainActivity -->
+    <string name="button_myDay">My Day</string>
+    <string name="button_history">History</string>
+    <string name="button_goal">Goal</string>
+    <string name="button_generateData">Generate random data</string>
+
+    <!-- MyDayActivity -->
     <string name="title_activity_my_day">How was your day?</string>
     <string name="textView_myDay_titulo">How was your day?</string>
     <string name="action_setVisibilidadeGrafico">Hide/Show Chart</string>
@@ -15,9 +18,6 @@
     <!-- PieChart -->
     <string name="pieChart_description">PieChart of Activities</string>
     <string name="pieChart_title">activities</string>
-
-    <!-- "genericos" -->
-    <string name="button_ok">OK</string>
 
     <!-- Avisos -->
     <string name="atividadeChecadaComMesmoNome">You already created an Activity with this same name</string>
@@ -91,6 +91,4 @@
     <string name="textView_associarAtividade">Choose the Activities connected with your Goal</string>
     <string name="editText_associarNovaAtividade">new actvity\'s name</string>
 
-
 </resources>
-
