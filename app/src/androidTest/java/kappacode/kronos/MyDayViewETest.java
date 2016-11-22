@@ -8,59 +8,56 @@ import android.test.suitebuilder.annotation.LargeTest;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
-
-import static android.support.test.InstrumentationRegistry.getInstrumentation;
-import static android.support.test.espresso.Espresso.onView;
-import static android.support.test.espresso.Espresso.pressBack;
-import static android.support.test.espresso.Espresso.openActionBarOverflowOrOptionsMenu;
-import static android.support.test.espresso.action.ViewActions.*;
-import static android.support.test.espresso.assertion.ViewAssertions.*;
-import static android.support.test.espresso.matcher.ViewMatchers.*;
-
-import kappacode.kronos.R;
+import android.view.WindowManager;
 
 import org.hamcrest.Description;
 import org.hamcrest.Matcher;
 import org.hamcrest.TypeSafeMatcher;
-import org.hamcrest.core.IsInstanceOf;
+import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import static android.support.test.espresso.Espresso.onView;
+import static android.support.test.espresso.action.ViewActions.click;
+import static android.support.test.espresso.assertion.ViewAssertions.matches;
+import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
+import static android.support.test.espresso.matcher.ViewMatchers.withId;
+import static android.support.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.allOf;
-import static org.hamcrest.Matchers.is;
 
 @LargeTest
 @RunWith(AndroidJUnit4.class)
-public class MainActivityMyDayFragmentViewsETest {
+public class MyDayViewETest {
 
     @Rule
     public ActivityTestRule<MainActivity> mActivityTestRule = new ActivityTestRule<>(MainActivity.class);
 
+    @Before
+    public void setUp() {
+        final MainActivity activity = mActivityTestRule.getActivity();
+        Runnable wakeUpDevice = new Runnable() {
+            public void run() {
+                activity.getWindow().addFlags(WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON |
+                        WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED |
+                        WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+            }
+        };
+        activity.runOnUiThread(wakeUpDevice);
+    }
+
     @Test
-    public void mainActivityMyDayFragmentViewsETest() {
+    public void myDayViewETest() {
         ViewInteraction appCompatTextView = onView(
                 allOf(withText("My Day"), isDisplayed()));
         appCompatTextView.perform(click());
 
-        ViewInteraction viewGroup = onView(
-                allOf(withId(R.id.piechart),
-                        childAtPosition(
-                                allOf(withId(R.id.container),
-                                        childAtPosition(
-                                                withId(R.id.viewpager),
-                                                1)),
-                                0),
-                        isDisplayed()));
-        viewGroup.check(matches(isDisplayed()));
-
         ViewInteraction listView = onView(
-                allOf(withId(R.id.listView_activities),
+                allOf(withId(R.id.listView_atividades),
                         childAtPosition(
-                                allOf(withId(R.id.container),
-                                        childAtPosition(
-                                                withId(R.id.viewpager),
-                                                1)),
+                                childAtPosition(
+                                        withId(R.id.viewpager),
+                                        1),
                                 1),
                         isDisplayed()));
         listView.check(matches(isDisplayed()));
@@ -81,7 +78,7 @@ public class MainActivityMyDayFragmentViewsETest {
             public boolean matchesSafely(View view) {
                 ViewParent parent = view.getParent();
                 return parent instanceof ViewGroup && parentMatcher.matches(parent)
-                        && view.equals(((ViewGroup)parent).getChildAt(position));
+                        && view.equals(((ViewGroup) parent).getChildAt(position));
             }
         };
     }

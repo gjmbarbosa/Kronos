@@ -16,6 +16,9 @@
     <string name="pieChart_description">PieChart of Activities</string>
     <string name="pieChart_title">activities</string>
 
+    <!-- "genericos" -->
+    <string name="button_ok">OK</string>
+
     <!-- Avisos -->
     <string name="atividadeChecadaComMesmoNome">You already created an Activity with this same name</string>
     <string name="horasDoDiaExcedidas">You exceeded the 24 hours of your day</string>

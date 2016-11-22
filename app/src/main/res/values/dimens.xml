@@ -9,9 +9,66 @@
     <dimen name="tab_label">14sp</dimen>
     <dimen name="custom_tab_layout_height">72dp</dimen>
 
+    <!-- MyDay Activity -->
+    <dimen name="textView_myDay_title">20dp</dimen>
+
+    <!-- ListActivityItem -->
+    <dimen name="list_activity_empty_item_layout">13dp</dimen>
+    <dimen name="editText_activityName_widht">80dp</dimen>
+    <dimen name="imageButton_activityCancel_width">30dp</dimen>
+    <dimen name="checkBox_inserir_grafico_width">35dp</dimen>
+    <dimen name="imageButton_activityRating_width">75dp</dimen>
+    <dimen name="spinner_minute">60dp</dimen>
+    <dimen name="spinner_horas">60dp</dimen>
+    <dimen name="textView_doisPontos">30sp</dimen>
+
     <!-- PieChart Activities-->
     <dimen name="pieChart_activities_height">250dp</dimen>
     <dimen name="pieChart_title">30sp</dimen>
+    <!-- BarChart Activities -->
+    <dimen name="barChart_activities_height">250dp</dimen>
+
+    <!-- History -->
+    <dimen name="textView_history_title">25sp</dimen>
+    <dimen name="textView_history_activity_title">34sp</dimen>
+    <dimen name="textView_history_goals_title">34sp</dimen>
+    <dimen name="history_spinner_margin">5dp</dimen>
+    <dimen name="history_checkedTextView">25sp</dimen>
+    <dimen name="history_spinner_height">30dp</dimen>
+    <dimen name="textView_history_activity">30sp</dimen>
+    <dimen name="textView_history_activity_quality">25sp</dimen>
+    <dimen name="textView_history_activity_duration">25sp</dimen>
+    <dimen name="textView_separator">30sp</dimen>
+
+    <!-- Goals -->
+    <dimen name="textView_goals_title">30dp</dimen>
+    <dimen name="textView_goals_category">30dp</dimen>
+    <dimen name="expandableListView_metas_divider">4px</dimen>
+
+    <!-- QualidadeDialog -->
+    <dimen name="dialog_qualidade_padding">5dp</dimen>
+    <dimen name="ratingBar_qualidade">240sp</dimen>
+
+    <!-- AddGoal -->
+    <dimen name="editText_metaDescricao_text">25sp</dimen>
+    <dimen name="textView_metaAtingir">@dimen/editText_metaDescricao_text</dimen>
+    <dimen name="editText_metaDuracaoHoras_text">@dimen/editText_metaDescricao_text</dimen>
+    <dimen name="editText_metaDuracaoMinutos_text">@dimen/editText_metaDuracaoHoras_text</dimen>
+    <dimen name="editText_metaCategoria_text">@dimen/editText_metaDescricao_text</dimen>
+    <dimen name="editText_metaPrazoCustom_text">@dimen/editText_metaDescricao_text</dimen>
+    <dimen name="spinner_metaPrazo_text">@dimen/editText_metaDescricao_text</dimen>
+    <dimen name="checkBox_metaNotificar_text">20sp</dimen>
+    <dimen name="checkBox_metaRepetir_text">@dimen/checkBox_metaNotificar_text</dimen>
+    <dimen name="editText_metaDuracaoMinutos_width">100dp</dimen>
+    <dimen name="editText_metaDuracaoHoras_width">90dp</dimen>
+    <dimen name="editText_metaPrazoCustom_width">100dp</dimen>
+    <dimen name="imageButton_metaCancelar_width">50dp</dimen>
+    <dimen name="imageButton_metaSalvar_width">50dp</dimen>
+    <dimen name="spinner_metaPrazo_margin">10dp</dimen>
+    <!-- Associar Atividade -->
+    <dimen name="textView_associarAtividade">25sp</dimen>
+    <dimen name="checkBox_atividadeAssociada_text">20sp</dimen>
+    <dimen name="editText_associarNovaAtividade">25sp</dimen>
 
 
 
