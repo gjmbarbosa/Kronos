@@ -55,17 +55,6 @@ public class MyDayViewExTest {
                 allOf(withId(R.id.button_myDay), withText("My Day"), isDisplayed()));
         appCompatButton.perform(click());
 
-        ViewInteraction textView = onView(
-                allOf(withText("How was your day?"),
-                        childAtPosition(
-                                allOf(withId(R.id.action_bar),
-                                        childAtPosition(
-                                                withId(R.id.action_bar_container),
-                                                0)),
-                                1),
-                        isDisplayed()));
-        textView.check(matches(withText("How was your day?")));
-
         ViewInteraction imageView = onView(
                 allOf(withContentDescription("More options"),
                         childAtPosition(
@@ -75,37 +64,6 @@ public class MyDayViewExTest {
                                 0),
                         isDisplayed()));
         imageView.check(matches(isDisplayed()));
-
-        ViewInteraction textView2 = onView(
-                allOf(withText("There are no Activities in your list in the moment.\nPress \"+ Add a new Activity\" to let Kronos help you :)"),
-                        childAtPosition(
-                                allOf(withId(R.id.listView_atividades),
-                                        childAtPosition(
-                                                IsInstanceOf.<View>instanceOf(android.widget.RelativeLayout.class),
-                                                0)),
-                                1),
-                        isDisplayed()));
-        textView2.check(matches(withText("There are no Activities in your list in the moment.\nPress \"+ Add a new Activity\" to let Kronos help you :)")));
-
-        ViewInteraction listView = onView(
-                allOf(withId(R.id.listView_atividades),
-                        childAtPosition(
-                                childAtPosition(
-                                        withId(android.R.id.content),
-                                        0),
-                                0),
-                        isDisplayed()));
-        listView.check(matches(isDisplayed()));
-
-        ViewInteraction button = onView(
-                allOf(withId(R.id.button_adicionar_atividdade),
-                        childAtPosition(
-                                childAtPosition(
-                                        withId(android.R.id.content),
-                                        0),
-                                1),
-                        isDisplayed()));
-        button.check(matches(isDisplayed()));
 
     }
 
