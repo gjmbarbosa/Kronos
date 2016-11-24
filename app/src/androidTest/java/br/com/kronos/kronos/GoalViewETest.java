@@ -62,15 +62,6 @@ public class GoalViewETest {
                         isDisplayed()));
         button.check(matches(isDisplayed()));
 
-        ViewInteraction expandableListView = onView(
-                allOf(withId(R.id.expandableListView_metas),
-                        childAtPosition(
-                                childAtPosition(
-                                        withId(android.R.id.content),
-                                        0),
-                                0),
-                        isDisplayed()));
-        expandableListView.check(matches(isDisplayed()));
 
     }
 
