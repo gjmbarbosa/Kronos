@@ -52,16 +52,6 @@ public class GoalViewETest {
                 allOf(withId(R.id.button_goal), withText("Goal"), isDisplayed()));
         appCompatButton.perform(click());
 
-        ViewInteraction expandableListView = onView(
-                allOf(withId(R.id.expandableListView_metas),
-                        childAtPosition(
-                                childAtPosition(
-                                        withId(android.R.id.content),
-                                        0),
-                                0),
-                        isDisplayed()));
-        expandableListView.check(matches(isDisplayed()));
-
     }
 
     private static Matcher<View> childAtPosition(
