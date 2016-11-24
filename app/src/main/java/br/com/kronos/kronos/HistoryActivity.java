@@ -195,7 +195,7 @@ public class HistoryActivity extends AppCompatActivity {
 
             //Adiciona Graficos ao header
            // listView.addHeaderView(pieChart);
-            listView.addHeaderView(barChart);
+            //listView.addHeaderView(barChart);
         } catch (HorasDiaExcedidoException e) {
             e.printStackTrace();
         }
